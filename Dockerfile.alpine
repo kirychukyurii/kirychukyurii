@@ -4,8 +4,8 @@ ENV HTTP_PORT 8081
 
 RUN apk add --update netcat-openbsd && rm -rf /var/cache/apk/*
 
-COPY ./index.html /app
-COPY ./http.sh /scripts
+COPY ./index.html /app/index.html
+COPY ./http.sh /scripts/http.sh
 
 RUN chmod +x /scripts/http.sh
 CMD /http.sh
