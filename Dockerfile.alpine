@@ -1,0 +1,11 @@
+FROM alpine:latest
+
+ENV HTTP_PORT 8081
+
+RUN apk add --update netcat-openbsd && rm -rf /var/cache/apk/*
+
+COPY ./index.html /app
+COPY ./http.sh /scripts
+
+RUN chmod +x /scripts/*.sh
+CMD /http.sh
