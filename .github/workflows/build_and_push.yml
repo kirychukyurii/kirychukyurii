@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: Dockerfile.alpine
+          file: ./Dockerfile.alpine
           push: true
           tags: yuriikirychuk/gl-basecamp:latest-alpine
           no-cache: true
