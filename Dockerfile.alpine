@@ -8,4 +8,4 @@ COPY ./index.html /app/index.html
 COPY ./http.sh /scripts/http.sh
 
 RUN chmod +x /scripts/http.sh
-CMD /scripts/http.sh
+CMD ["sh", "/scripts/http.sh"]
